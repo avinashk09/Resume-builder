@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- HTML code -->
+    <div class="container" id="cv-form">
+        <h1 class="text-center my-3">Resume Generator</h1>
+        <p class="text-center my-3">By OpenCV</p>
+        <div class="row">
+            <div class="col-md-6">
+                <!-- Personal Information -->
+                <h3>Personal Information</h3>
+                <div class="form-group mt-2">
+                    <label for="nameField">Your Name</label>
+                    <input type="text" id="nameField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="contactField">Contact Number</label>
+                    <input type="text" id="contactField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="addressField">Address</label>
+                    <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
+                </div>
+                <div class="form-group mt-3"></div>
+                <h4 class="text-primary my-2">Social Media handles</h4>
+                <div class="form-group mt-2">
+                    <label for="linkedinField">Linkedin</label>
+                    <input type="text" id="linkedinField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="githubField">Github</label>
+                    <input type="text" id="githubField" placeholder="Enter here" class="form-control">
+                </div>
+                <div class="form-group mt-2">
+                    <label for="gmailField">Gmail</label>
+                    <input type="text" id="gmailField" placeholder="Enter here" class="form-control">
+                </div>
+            </div>
+
+
+            <div class="col-md-6">
+                <!-- Professional Information -->
+                <h3>Professional Information</h3>
+                <div class="form-group mt-2">
+                    <label for="objField">Objectives</label>
+                    <textarea id="objField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-2">
+                    <label for="skillsField">Skills</label>
+                    <textarea id="skillsField" placeholder="Enter here" class="form-control"></textarea>
+                </div>
+                <div class="form-group mt-2" id="we">
+                    <label for="workField">Work Experience</label>
+                    <textarea placeholder="Enter here" class="form-control weField" rows="2"></textarea>
+                <div class="container text-center mt-2" id="weAddButton">
+                    <button onclick="addNewWEField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+                </div>
+                <div class="form-group mt-2" id="eq">
+                    <label for="eqField">Educational Qualification</label>
+                    <textarea placeholder="Enter here" class="form-control eqField" rows="2"></textarea>
+                <div class="container text-center mt-2" id="eqAddButton">
+                    <button onclick="addeqField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+                </div>
+                <div class="form-group mt-2" id="ach">
+                    <label for="eqField">Projects</label>
+                    <textarea placeholder="Enter here" class="form-control achField" rows="2"></textarea>
+                <div class="container text-center mt-2" id="achAddButton">
+                    <button onclick="addachievementsField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+                </div>
+               
+                <!--<div class="form-group mt-2" id="ach">
+                    <label for="achField">Projects</label>
+                    <textarea placeholder="Enter here" class="form-control achField" rows="2"></textarea>
+                <div  class="container text-center mt-2" id="achAddButton">
+                    <button onclick="addachievementsField()" class="btn btn-primary btn-sm">Add</button>
+                </div>
+                </div>-->
+            </div>
+        </div>
+        <div class="container text-center">
+            <button onclick = "generateCV()" class="btn btn-primary btn-lg">Generate CV</button>
+        </div>
+    </div>
+
+    <!-- CV template -->
+    <div class="container mt-5" id="cv-template">
+        <div class="row">
+            <div class="col-md-4 text-center py-5 background">
+                <!-- First column -->
+                <img src="https://www.mockofun.com/wp-content/uploads/2019/12/circle-profile-pic.jpg" alt="Profile Image"
+                class = "img-fluid myimg">
+                <div class="container">
+                    <h5>Personal Information</h5>
+                    <p id="namet1">Shreya Agarwal</p>
+                    <p id="phonet">9471308901</p>
+                    <p id="addt">New Delhi, India</p> 
+                    <hr />
+                    <h5>Social Media Handles</h5>
+                    <p id="lt"><a href="#1">https://www.linkedin.com/in/avinash-kumar09/</a></p>
+                    <p id="gt"><a href="#1">https://github.com/</a></p>
+                    <p id="gmt"><a href="#1">https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox</a></p>
+                </div>
+            </div>
+            <div class="col-md-8 py-5">
+                <!-- Second column -->
+                <!-- Content for the second column -->
+                <h1 class="text-center" style="font-weight: 950;" id="namet2">Shreya Agarwal</h1>
+                <!--Objective Card-->
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h5>Objective</h5>
+                    </div>
+                    <div class="card-body">
+                        <p id="ot">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis a, distinctio praesentium quis necessitatibus repellendus fugiat voluptatibus minus quo animi illo ipsa dolore eum labore accusantium eligendi inventore explicabo obcaecati?</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h5>Skills</h5>
+                    </div>
+                    <div class="card-body">
+                        <p id="st">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis a, distinctio praesentium quis necessitatibus repellendus fugiat voluptatibus minus quo animi illo ipsa dolore eum labore accusantium eligendi inventore explicabo obcaecati?</p>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h5>Work Experience</h5>
+                    </div>
+                    <div class="card-body">
+                       <ul id="wet">
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                        <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                       </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h5>Educational Qualification</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul id="eqt">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                           </ul>
+                    </div>
+                </div>
+                <div class="card mt-4">
+                    <div class="card-header background">
+                        <h5>Projects</h5>
+                    </div>
+                    <div class="card-body">
+                        <ul id="pt">
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                            <li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tempore.</li>
+                           </ul>
+                    </div>
+                </div>
+                <div class="container mt-3 text-center">
+                    <button onclick="printCV()" class ="btn background">
+                        Print CV
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Lora:wght@500;600&family=Lugrasimo&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+*:active,
+*:hover,
+*:focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
+/* Navbar hover effect */
+.navbar-light .navbar-nav .nav-link:hover {
+  color: #176B87 !important; /* Change the text color on hover */
+  transition: color 0.3s ease; /* Change the background color on hover */
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: #001C30 !important;
+}
+
+.navbar-light .navbar-brand {
+  font-family: 'Lugrasimo', cursive;
+  font-size: 24px; /* Adjust the font size for the website name */
+}
+
+.navbar-light .navbar-brand:hover {
+  transition: color 0.3s ease;
+  color: #176B87 !important;
+}
+
+.first {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+}
+
+.button {
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+body {
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 1000;
+}
+
+/* Apply styles to the 'second' class */
+.second {
+  display: flex;
+}
+
+#second-first {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #001C30;
+  flex: 1;
+}
+
+#image1 {
+  width: 550px;
+  height: 300px;
+  flex: 1;
+  max-width: 50%; /* Adjust the width of the image as desired */
+}
+
+.third {
+  display: flex;
+}
+
+#third-first {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #001C30;
+  flex: 1;
+}
+
+#image2 {
+  width: 550px;
+  height: 300px;
+  flex: 1;
+  max-width: 50%; /* Adjust the width of the image as desired */
+}
+
+.fourth {
+  display: flex;
+}
+
+#fourth-first {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  padding-top: 150px;
+  padding-left: 100px;
+  padding-right: 100px;
+  color: #001C30;
+  flex: 1;
+}
+
+#image3 {
+  width: 200px;
+  height: 300px;
+  flex: 1;
+  max-width: 30%; /* Adjust the width of the image as desired */
+}
+
+.customer-review {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.customer-avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.customer-info {
+  margin-left: 10px;
+}
+
+.customer-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.customer-comment {
+  margin: 5px 0;
+  font-size: 16px;
+  font-family: "Dancing Script", cursive;
+}
+
+.rev-section {
+  margin: auto;
+
+  padding: 5rem 1rem;
+  max-width: 1100px;
+  text-align: center;
+}
+
+.title {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: rgb(50, 50, 50);
+  margin-bottom: 0.5rem;
+}
+
+.note {
+  font-size: 1.1rem;
+  color: #EF6262;
+  font-style: italic;
+}
+
+.reviews {
+  margin: 2rem auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.review {
+  margin: 0 1rem;
+  min-width: 300px;
+  flex: 1;
+  transition: transform 0.3s ease;
+}
+
+.review:hover {
+  transform: scale(1.1); /* Increase the scale value to zoom in further */
+}
+
+.head-review {
+  margin: 1.75rem auto;
+  width: 150px;
+  height: 150px;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+.body-review {
+  background-color: rgb(238, 238, 238);
+  padding: 2.5rem;
+  box-shadow: 2px 2px 10px 3px rgb(225, 225, 225);
+}
+
+.name-review {
+  font-size: 1.5rem;
+  color: rgb(50, 50, 50);
+  margin-bottom: 0.25rem;
+}
+
+.place-review {
+  color: #EF6262;
+  font-style: italic;
+}
+
+.rating {
+  color: rgb(253, 180, 42);
+  margin: 1rem 0;
+}
+
+.desc-review {
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  color: rgb(150, 150, 150);
+}
+.navbar-brand img {
+  height: auto; 
+  width: auto;/* Adjust height as needed */
+  object-fit: contain; /* Or any other desired object-fit value */
+  border-radius: 0; /* Remove border-radius if not needed */
+  box-shadow: none; /* Remove box-shadow if not needed */
+}
+#image1
+{
+  height: auto; 
+  width: auto;/* Adjust height as needed */
+  object-fit: contain; /* Or any other desired object-fit value */
+  border-radius: 0; /* Remove border-radius if not needed */
+  box-shadow: none; /* Remove box-shadow if not needed */
+}
+#image2{
+  height: auto; 
+  width: auto;/* Adjust height as needed */
+  object-fit: contain; /* Or any other desired object-fit value */
+  border-radius: 0; /* Remove border-radius if not needed */
+  box-shadow: none; /* Remove box-shadow if not needed */
+}
+#image3
+{
+   height: auto; 
+  width: auto;/* Adjust height as needed */
+  object-fit: contain; /* Or any other desired object-fit value */
+  border-radius: 0; /* Remove border-radius if not needed */
+  box-shadow: none; /* Remove box-shadow if not needed */
+}
+
+
+  
+  
+  
+  
